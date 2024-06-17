@@ -1,0 +1,366 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  block-size: 100%;
+}
+
+.page {
+  inline-size: 1200px;
+  block-size: 100%;
+  margin: auto;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  background-color: #1b1919;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.page {
+  padding: 133px 30px 132px;
+}
+
+.content {
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  align-items: end;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  block-size: 535px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  inline-size: 710px;
+}
+
+.result__video-container {
+  position: relative;
+}
+
+.result__video {
+  inline-size: 100%;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 225px 211px 194px;
+  /*grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  display: flex;*/
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #FFF;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+.search-form__fieldset {
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  border: none;
+}
+
+.search-form__fieldset-title {
+  color: #FFF;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__label {
+  /*width: fit-content; — не поняла как можно исопльзовать это свойство*/
+  inline-size: 100%;
+  display: flex;
+  gap: 5px;
+
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #FFF;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:focus-visible {
+  outline: none;
+}
+
+.search-form__textfield {
+  inline-size: 100%;
+  appearance: none;
+  background-color: transparent;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  padding: 2px 2px 2px 0;
+  font-family: inherit;
+  color: inherit;
+}
+
+
+.search-form__textfield:active {
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+
+}
+
+.search-form__textfield:hover {
+  cursor: text;
+}
+
+input::placeholder {
+  appearance: auto;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search-form__pseudo-checkbox {
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid #FFF;
+}
+
+.search-form__pseudo-checkbox:hover + span{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.search-form__label-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+input[type="checkbox"]:hover+span {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked+span {
+  background-image: url(../images/checkbox.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content__details {
+  inline-size: 399px;
+  block-size: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.content__details::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+.content__video-card-description-container {
+  inline-size: 200px;
+
+}
+
+
+.content__video-card-title {
+  word-wrap: break-word;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 100%;
+}
+
+.title {
+  margin-block-end: 26px;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__list-item {
+  block-size: 107px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  color: #FFF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.content__card-link:focus-visible {
+  border: 1px solid #FFF;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__video-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.content__video-card-title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-block-end: 6px;
+}
+
+.content__video-card-description {
+  color: #FFF;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+}
+
+.button {
+  inline-size: 100%; /*Это правильно?*/
+  block-size: 34px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  color: #FFF;
+  text-align: center;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*в рекомендаця сказано: На странице две кнопки: 
+одна в форме, другая в списке карточек. 
+У них есть общие стили, но у кнопки в списке карточек есть свои собственные. 
+Чтобы всё сделать, как надо, созданы три класса: 
+button, search-form__submit-button и more-button. 
+Подумайте, какие стили должны быть в каждом из них. — не поняла в чём разница в конпках? 
+По дизайну они абсолютно одинаковые, разница только в ширине. 
+Для чего делать тогда 3 класса?*/
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #FFF;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.more-button {
+  margin: 2px
+}
+
+.error {
+  inline-size: 100%;
+  block-size: 100%;
+  position: absolute;
+}
+
+.error__title {
+  color: #FFF;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
