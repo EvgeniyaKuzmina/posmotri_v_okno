@@ -141,6 +141,7 @@ ol {
   inline-size: 100%;
   appearance: none;
   background-color: transparent;
+  border:0;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
   padding: 2px 2px 2px 0;
@@ -211,6 +212,8 @@ input[type="checkbox"]:checked+span {
 
 
 .content__video-card-description-container {
+  padding-top: 6px;
+  padding-left: 6px;
   inline-size: 200px;
 
 }
@@ -342,10 +345,6 @@ button, search-form__submit-button и more-button.
 
 .button:active {
   background-color: #545050;
-}
-
-.more-button {
-  margin: 2px
 }
 
 .error {
